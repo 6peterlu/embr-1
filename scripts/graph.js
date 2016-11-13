@@ -6,7 +6,7 @@ var request = require('request'),
         
     var args = require('tav').set({
                     url:{
-                    note:'URL of the page to parse'
+                    note:'../scripts/index.html'
                     }
                 },'node-dom for node.js',true);
  

@@ -1,37 +1,5 @@
 var d3 = require("d3");
-var request = require('request'),
-        dom = require('node-dom').dom,
-        fs = require('fs'),   
-        URL = require('url');
-        
-    var args = require('tav').set({
-                    url:{
-                    note:'../scripts/index.html'
-                    }
-                },'node-dom for node.js',true);
- 
-    var url = URL.parse(args.url);
- 
-    var req = {uri:url.href};
- 
-    request(req,function (error, response, page) {
-    
-        if (!error && response.statusCode == 200) {
-            
-            var options = { url:url,
-                                features: {
-                                            FetchExternalResources  : {script:'', img:'', input:'', link:''},
-                                            ProcessExternalResources: {script:'',img:'',link:'',input:''},
-                                            removeScript: true //Remove scripts for innerHTML and outerHTML output
-                                }
-            };
-            
-            window=dom(page,null,options); //global
-            
-            document=window.document; //global
-            
-            document.onload=function() {
-              var svg1 = document.getElementById('#dataGraph');
+var svg1 = document.getElementById('#dataGraph');
 var rect = svg1.getBoundingClientRect();
 console.log(rect.height);
 
@@ -151,10 +119,6 @@ update('./test.json');
 module.exports = function() {
   this.up = function(a) { update(a) };
 }
-
-            };
-        };
-    });
 
 
 

@@ -1,4 +1,5 @@
 var d3 = require("d3");
+var jsdom = require("jsdom");
 //var svg1 = document.getElementById('#dataGraph');
 //var rect = svg1.getBoundingClientRect();
 //console.log(rect.height);
@@ -9,7 +10,9 @@ var d3 = require("d3");
     modal.style.display = "none";
 }*/
 
-var svg = d3.select("svg"),
+var document = jsdom.jsdom();
+
+var svg = d3.select(document.body).append("svg");,
     margin = 10,
     diameter = 400,
     g = svg.append("g").attr("transform", "translate(" + 400 / 2+ "," + 400 / 2 + ")");

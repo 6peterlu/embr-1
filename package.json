@@ -15,7 +15,13 @@
     "nodemon": "^1.9.2",
     "stylus": "^0.54.5",
     "watson-developer-cloud": "^2.8.2",
-    "d3": "3"
+    "d3": "3",
+    "cheerio":"0.22.0",
+    "fs":"0.0.2",
+    "node-dom":"0.1.0",
+    "request":"2.74.0",
+    "tav":"0.1.0",
+    "url":"0.11.0"
   },
   "engines": {
     "node": "7.1.0"

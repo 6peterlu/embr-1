@@ -1,18 +1,18 @@
 var d3 = require("d3");
-var svg1 = document.getElementById('#dataGraph');
+//var svg1 = document.getElementById('#dataGraph');
 var rect = svg1.getBoundingClientRect();
 console.log(rect.height);
 
-var modal = $('#myModal');
-var span = $(".close")[0];
-span.onclick = function() {
+//var modal = $('#myModal');
+//var span = $(".close")[0];
+/*span.onclick = function() {
     modal.style.display = "none";
-}
+}*/
 
 var svg = d3.select("svg"),
     margin = 10,
-    diameter = rect.height,
-    g = svg.append("g").attr("transform", "translate(" + rect.width / 2+ "," + rect.height / 2 + ")");
+    diameter = 400,
+    g = svg.append("g").attr("transform", "translate(" + 400 / 2+ "," + 400 / 2 + ")");
 
 
 var color = d3.scaleLinear()
@@ -49,11 +49,11 @@ d3.json(jaysean, function(error, root) {
         function(d) { 
           if(d.depth >= 2 && (focus.depth - d.depth >= -1)) {
             d3.event.stopPropagation();
-            modal.style.display = "block";
-            $('sms').innerHTML = "";
-            for(i = 0; i < d.data.children[0].sms.length; i ++) {
+            //modal.style.display = "block";
+            //$('sms').innerHTML = "";
+            /*for(i = 0; i < d.data.children[0].sms.length; i ++) {
               $('sms').innerHTML += d.data.children[0].sms[i].textmess + "<br/>";
-            }
+            }*/
              
          } else if (focus !== d) {
             zoom(d);

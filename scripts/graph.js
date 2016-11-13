@@ -1,7 +1,7 @@
 var d3 = require("d3");
 //var svg1 = document.getElementById('#dataGraph');
 //var rect = svg1.getBoundingClientRect();
-console.log(rect.height);
+//console.log(rect.height);
 
 //var modal = $('#myModal');
 //var span = $(".close")[0];

@@ -1,3 +1,4 @@
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"/>
 var d3 = require("d3");
 var jsdom = require("jsdom");
 //var svg1 = document.getElementById('#dataGraph');

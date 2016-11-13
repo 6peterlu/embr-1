@@ -31,7 +31,7 @@ var request = require('request'),
             document=window.document; //global
             
             document.onload=function() {
-              var svg1 = $('#dataGraph');
+              var svg1 = document.getElementById('#dataGraph');
 var rect = svg1.getBoundingClientRect();
 console.log(rect.height);
 

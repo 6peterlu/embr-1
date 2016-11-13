@@ -1,4 +1,4 @@
-
+var d3 = require("d3");
 var svg1 = $('#dataGraph');
 var rect = svg1.getBoundingClientRect();
 console.log(rect.height);

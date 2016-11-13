@@ -40,13 +40,13 @@ var listener = app.listen(process.env.PORT, function () {
 function getClassification(query){
 
 	var natural_language_classifier = new NaturalLanguageClassifierV1({
-	  username: '78da41dc-3b5e-4e35-a514-0c7bb266d642',
-	  password: '6utZEoLsdqDu'
+	  username: 'd70889aa-7fc1-423b-a364-368cfbe96fa0',
+	  password: 'nTrwUp2md43K'
 	});
 
 	natural_language_classifier.classify({
 	  text: query,
-	  classifier_id: '<classifier-id>' },
+	  classifier_id: '004a12x110-nlc-3373' },
 	  function(err, response) {
 	    if (err)
 	      console.log('error:', err);
